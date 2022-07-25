@@ -1,0 +1,34 @@
+{% load static%}
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+
+    <div class="container" data-aos="fade-up">
+
+      <header class="section-header">
+        <h2>Fastlane Tindera Feedbacks</h2>
+      </header>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+        <div class="swiper-wrapper">
+          {% for x in feedback_profile %}
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <div class="stars">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p>{{x.statement}}</p>
+              <div class="profile mt-auto">
+                <img src="{{x.feedback_profile.url}}" class="testimonial-img" alt="">
+                <h3>{{x.name}}</h3>
+                <h4>{{x.info}}</h4>
+              </div>
+            </div>
+          </div><!-- End testimonial item -->
+          {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </div>
+
+  </section><!-- End Testimonials Section -->

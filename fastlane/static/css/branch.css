@@ -1,0 +1,14 @@
+.branch .container{
+    background-color: #fff;
+    border: solid 6px #4154f1;
+    opacity: 75%;
+    border-radius: 30px;
+}
+.branch .container .right{
+    background-color: #4154f1;
+    border-radius: 0 20px  20px 0;
+}
+.branch .container .right h3{
+    color:white ;
+    border-radius: 0 20px  20px 0;
+}

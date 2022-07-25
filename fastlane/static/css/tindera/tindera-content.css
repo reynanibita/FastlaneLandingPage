@@ -1,0 +1,14 @@
+.tindera-home{
+    margin-top: 60px;
+    background: url(../../img/features-2.png) no-repeat;
+    height: 620px;
+}
+.contact .container .left{
+    background-color: aqua;
+    height: 620px;
+}
+
+.contact .container .right{
+    background-color: blueviolet;
+    height: 620px;
+}

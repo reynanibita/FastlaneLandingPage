@@ -1,0 +1,75 @@
+/*--------------------------------------------------------------
+# Team Section
+--------------------------------------------------------------*/
+.team .row .col-xl-3{
+  margin-top: 20px;
+}
+.team .team-team .team-img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.team .team-team .social {
+  position: absolute;
+  left: 0;
+  top: -18px;
+  right: 0;
+  opacity: 0;
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.team .team-team .social a {
+  transition: color 0.3s;
+  color: white;
+  background:#4151f4;
+  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.team .team-team .social a i {
+  line-height: 0;
+  font-size: 16px;
+}
+.team .team-team .social a:hover {
+  background: crimson;
+}
+.team .team-team .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+.team .team-team .team-info {
+  padding: 30px 15px;
+  text-align: center;
+  box-shadow: 1px 1px 2px;
+  background: white;
+  margin: -50px 20px 0 20px;
+  position: relative;
+  border-radius: 8px;
+}
+.team .team-team .team-info h4 {
+  font-weight: 400;
+  margin-bottom: 5px;
+  font-size: 24px;
+  color: #4151f4;
+}
+.team .team-team .team-info span {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: crimson;
+}
+.team .team-team .team-info p {
+  font-style: italic;
+  font-size: 8px;
+  line-height: 26px;
+  color: #4151f4;
+}
+.team .team-team:hover .social {
+  opacity: 1;
+}

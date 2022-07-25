@@ -1,0 +1,7 @@
+.for .contents{
+    border-radius: 13px;
+    background: #4154f1;
+    color: white;
+    box-shadow:  5px 5px 10px #cacaca;
+    height: auto;
+}

@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,6 +25,14 @@ SECRET_KEY = 'django-insecure-m+)(8l+ste(10mrd6=o55l+&-r)v9r8459np6qn5$yh--nv7os
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+#SMTP CONFIGURATIONS
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'fastlanetest123@gmail.com'
+EMAIL_HOST_PASSWORD = 'pass12345678'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
 
 ALLOWED_HOSTS = []
 
@@ -117,6 +126,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,"media/")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

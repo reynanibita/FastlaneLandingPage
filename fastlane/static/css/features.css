@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+.features{
+    margin-top: 60px;
+  }
+  .features .feature-icons h3 {
+    color: #012970;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  @media (max-width: 768px) {
+    .features .feature-icons h3 {
+      font-size: 28px;
+    }
+  }
+  .features .feature-icons .content .icon-box {
+    display: flex;
+  }
+  .features .feature-icons .content .icon-box h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #012970;
+  }
+  .features .feature-icons .content .icon-box i {
+    font-size: 44px;
+    line-height: 44px;
+    color: #0245bc;
+    margin-right: 15px;
+  }
+  .features .feature-icons .content .icon-box p {
+    font-size: 15px;
+    color: #848484;
+  }
+  .features .container ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+  }
+  .features .container ul li{
+    text-align: center;
+    padding-left: 10px;
+  }
+  .features .container ul li :hover{
+    background-color: crimson;
+    border-color: crimson;
+  }

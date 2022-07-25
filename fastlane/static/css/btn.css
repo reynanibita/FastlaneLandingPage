@@ -1,0 +1,13 @@
+
+.btn{
+    color: white;
+}
+.btn li{
+    background: #4154f1;
+    border-radius: 4px;
+    list-style: none;
+    text-decoration: none;
+  }
+  .btn li:hover{
+    background: crimson;
+  }
