@@ -1,6 +1,7 @@
 from django import forms
 
 class ContactForm(forms.Form):
-    name = forms.CharField(max_lenght=255)
+    name = forms.CharField(max_length=255)
     email = forms.EmailField()
-    content = forms.CharField(widget=forms.Textarea)
+    subject = forms.CharField(max_length=255)
+    message = forms.CharField(widget=forms.Textarea)

@@ -1,8 +1,11 @@
 from django.http import HttpResponse
-from django.shortcuts import render
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import Partner, Feedback, Team, OjtTeam
+from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
+
+from .forms import ContactForm
 
 
 def index(request):
@@ -37,17 +40,29 @@ def store(request):
     return render(request,"fastlane/store.html")
 
 def partner(request):
-        
-    if request.method == 'POST':
-        subject = request.POST.get('subject')
-        message = request.POST.get('message')
-        name = request.POST.get('name')        
-        email = request.POST.get('email')
-        send_mail(subject, message, settings.EMAIL_HOST_USER, [email], fail_silently=False)
-        return render(request, "fastlane/email_sent.html", {'email': email})
-        
     partner_logo=Partner.objects.all
-    return render(request,"fastlane/partner.html",{"partner_logo":partner_logo})
+    if request.method == 'POST':
+            form = ContactForm(request.POST)
+
+            if form.is_valid():
+                name = form.cleaned_data['name']
+                email = form.cleaned_data['email']
+                subject = form.cleaned_data['subject']
+                message = form.cleaned_data['message']
+
+                html = render_to_string('fastlane/infocontact.html', {
+                    'name': name,
+                    'email': email,
+                    'subject': subject,
+                    'message': message
+                })
+
+                send_mail(subject, message , email, ['fastlanetest123@gmail.com'], html_message=html)
+
+                return redirect('index')
+    else:
+            form = ContactForm()
+    return render(request,"fastlane/partner.html",{"partner_logo":partner_logo,'form': form})
 
 def signin(request):
     return render(request,"fastlane/sign-in.html")

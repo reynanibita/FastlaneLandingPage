@@ -28,11 +28,10 @@ DEBUG = True
 
 #SMTP CONFIGURATIONS
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'fastlanetest123@gmail.com'
-EMAIL_HOST_PASSWORD = 'pass12345678'
-EMAIL_USE_TLS = True
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '40fb8042abbe47'
+EMAIL_HOST_PASSWORD = 'ecceec1a6b730f'
+EMAIL_PORT = '2525'
 
 ALLOWED_HOSTS = []
 
